@@ -1,0 +1,157 @@
+@primary: #0d6efd;
+@info: white;
+@lighbackground: rgba(0, 0, 0, 0.1);
+
+.modal {
+    top: 25%;
+}
+
+a, a:hover, a:active {
+    text-decoration: none;
+}
+
+.loading-content {
+    height: 10rem;
+    .spinner-border {
+        margin-right: 2rem;
+    }
+}
+
+.content-container {
+    @media screen and (min-width: 1200px) {
+        width: 1200px;
+        margin: 0 auto;
+    }
+    padding: 0 .5rem 6rem;
+}
+
+.list-group-item {
+    border: none;
+    border-bottom: .04rem solid @lighbackground;
+}
+
+.notice-container {
+    @media screen and (min-width: 1200px) {
+        width: 30vw;
+        min-width: 30%;
+    }
+    
+    align-self: center;
+    box-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.3);
+    border-radius: .2rem;
+    padding: 3rem;
+    margin: auto;
+}
+
+#create-exam-container {
+    height: 100%;
+    
+    .list-group-item {
+        .input-wrapper {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+        input {
+            margin-right: 20px;
+        }
+        .sub-info {
+            margin-top: 1rem;
+            span {
+                display: inline-block;
+                padding: 2px 6px;
+                border: 1px solid #CCC;
+                border-radius: 1rem;
+                font-size: 0.8rem;
+                color: grey;
+                margin-right: 1rem;
+            }
+        }
+    }
+
+
+    .operate-bar {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 3rem;
+        background-color: @info;
+        padding: .5rem;
+        box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+        z-index: 9;
+
+        .operate-container {
+
+            @media screen and (min-width: 1200px) {
+                width: 1200px;
+                margin: 0 auto;
+            }
+        }
+    } 
+}
+
+
+#list-exam-container {
+    .sub-info {
+        color: grey;
+        font-size: 0.8rem;
+    }
+}
+
+
+
+#quiz-container {
+    .err-container {
+        margin-top: 20%;
+        .alert-danger {
+            padding: 2rem 5rem;
+        }
+    }
+
+    .quiz-title {
+        border-bottom: .1rem solid @lighbackground;
+        padding-bottom: .6rem;
+        margin-bottom: 1rem;
+    }
+    .question-item {
+        border-bottom: .05rem solid @lighbackground;
+        line-height: 2rem;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+
+        .options-container {
+            input {
+                vertical-align: text-bottom;
+                margin-right: .6rem;
+            }
+            textarea {
+                width: 100%;
+                @media screen and (min-width: 1200px) {
+                    width: 80%;
+                }
+                
+            }
+            
+        }
+
+        .form-check-input:checked.wrong {
+            background-color: #c30;
+            border-color: #c30;
+        }
+        textarea.wrong {
+            border-color: #c30;
+        }
+    }
+    
+    #score-container {
+        height: 4rem;
+        
+        .final-score{
+            margin: 0 1rem;
+            font-size: 2rem;
+        }
+    }
+    
+}
+
+
+
